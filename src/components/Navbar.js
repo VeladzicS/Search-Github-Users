@@ -1,9 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useAuth0 } from '@auth0/auth0-react';
+import React from "react";
+import styled from "styled-components";
+import github from "../images/github.png";
 
 const Navbar = () => {
-  return <h2>navbar component</h2>;
+  return (
+    <Wrapper>
+      <img src={github} alt="Logo" />
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.nav`
@@ -12,7 +16,6 @@ const Wrapper = styled.nav`
   background: var(--clr-white);
   text-align: center;
   display: grid;
-  grid-template-columns: auto auto 100px;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
@@ -21,9 +24,8 @@ const Wrapper = styled.nav`
     font-weight: 400;
   }
   img {
-    width: 35px !important;
-    height: 35px;
-    border-radius: 50%;
+    width: 100px;
+    height: auto;
     object-fit: cover;
   }
   button {
